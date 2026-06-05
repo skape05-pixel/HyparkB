@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión Wi-Fi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+            text-align: center;
+            max-width: 420px;
+            width: 90%;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .info {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            margin-top: 15px;
+        }
+
+        .copy {
+            margin-top: 15px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>📶 Wi-Fi</h1>
+
+    <div class="info">
+        <div><span class="label">Red:</span> ALHN-7415-5</div>
+        <div><span class="label">Contraseña:</span> KG3VLjEMH2</div>
+    </div>
+
+    <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=WIFI:T:WPA;S:ALHN-7415-5;P:KG3VLjEMH2;;"
+        alt="QR WiFi">
+
+    <br>
+
+    <button class="copy" onclick="copiarPassword()">
+        Copiar contraseña
+    </button>
+</div>
+
+<script>
+function copiarPassword() {
+    navigator.clipboard.writeText("KG3VLjEMH2");
+    alert("Contraseña copiada");
+}
+</script>
+
+</body>
+</html>
